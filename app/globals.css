@@ -1,0 +1,367 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   DESIGN SYSTEM - STRICT COLOR PALETTE
+   ============================================
+   Black:  #0a0a0a (backgrounds)
+   Orange: #ff6b00 (accents, highlights)
+   White:  #ffffff (text, icons)
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff6b00;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff8533;
+}
+
+/* ============================================
+   GLASSMORPHISM CARDS
+   ============================================ */
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+}
+
+.glass-card {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 107, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+    background: rgba(20, 20, 20, 0.8);
+    border-color: rgba(255, 107, 0, 0.4);
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.2);
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
+.glow-orange {
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+}
+
+.glow-orange-strong {
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.5);
+}
+
+.glow-orange-hover:hover {
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.4);
+}
+
+/* ============================================
+   TEXT STYLES
+   ============================================ */
+.text-gradient {
+    background: linear-gradient(135deg, #ff6b00 0%, #ff8533 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-primary {
+    color: #ff6b00;
+}
+
+.text-secondary {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   BUTTONS - REUSABLE STYLES
+   ============================================ */
+.btn-primary {
+    padding: 1rem 2rem;
+    background: #ff6b00;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background: #ff8533;
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 107, 0, 0.4);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 107, 0, 0.1);
+    border-color: #ff6b00;
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.2);
+}
+
+.btn-ghost {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 107, 0, 0.1);
+    border-color: rgba(255, 107, 0, 0.3);
+}
+
+/* ============================================
+   CARDS - REUSABLE STYLES
+   ============================================ */
+.card {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 107, 0, 0.15);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    background: rgba(20, 20, 20, 0.8);
+    border-color: rgba(255, 107, 0, 0.4);
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+.card-flat {
+    background: rgba(15, 15, 15, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+/* ============================================
+   TRANSITIONS & ANIMATIONS
+   ============================================ */
+.transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-fast {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-slow {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   BORDERS & DIVIDERS
+   ============================================ */
+.border-orange {
+    border-color: rgba(255, 107, 0, 0.3);
+}
+
+.border-orange-light {
+    border-color: rgba(255, 107, 0, 0.15);
+}
+
+.border-white-subtle {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   BACKGROUNDS
+   ============================================ */
+.bg-black {
+    background-color: #0a0a0a;
+}
+
+.bg-black-light {
+    background-color: #141414;
+}
+
+.bg-black-lighter {
+    background-color: #1a1a1a;
+}
+
+.bg-orange {
+    background-color: #ff6b00;
+}
+
+.bg-orange-subtle {
+    background-color: rgba(255, 107, 0, 0.1);
+}
+
+/* ============================================
+   SHADOWS
+   ============================================ */
+.shadow-orange {
+    box-shadow: 0 4px 20px rgba(255, 107, 0, 0.2);
+}
+
+.shadow-orange-lg {
+    box-shadow: 0 8px 40px rgba(255, 107, 0, 0.3);
+}
+
+.shadow-soft {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   FOCUS STATES
+   ============================================ */
+*:focus-visible {
+    outline: 2px solid #ff6b00;
+    outline-offset: 2px;
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+::selection {
+    background-color: #ff6b00;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background-color: #ff6b00;
+    color: #ffffff;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.container-custom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .container-custom {
+        padding: 0 1.5rem;
+    }
+}
+
+.section-padding {
+    padding: 4rem 0;
+}
+
+@media (min-width: 640px) {
+    .section-padding {
+        padding: 5rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-padding {
+        padding: 6rem 0;
+    }
+}
+
+/* ============================================
+   TOUCH OPTIMIZATION
+   ============================================ */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Touch devices */
+    button,
+    a,
+    .cursor-pointer {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Disable hover effects on touch */
+    .hover\:scale-105:hover {
+        transform: none;
+    }
+}
+
+/* ============================================
+   SNAP SCROLLING
+   ============================================ */
+.snap-x {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.snap-center {
+    scroll-snap-align: center;
+}
+
+.snap-start {
+    scroll-snap-align: start;
+}
+
+/* ============================================
+   SMOOTH SCROLLING
+   ============================================ */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
