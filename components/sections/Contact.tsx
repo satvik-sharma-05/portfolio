@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Phone } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -25,13 +25,23 @@ export default function Contact() {
                     {/* Contact Links */}
                     <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 mb-12 sm:mb-16 px-4">
                         <motion.a
-                            href="mailto:satviksharma0510@gmail.com"
+                            href="mailto:sharmasatvik031@gmail.com"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-primary rounded-full hover:bg-opacity-90 transition-smooth glow-orange text-sm sm:text-base"
                         >
                             <Mail size={18} className="sm:w-5 sm:h-5" />
                             <span className="font-semibold">Email Me</span>
+                        </motion.a>
+
+                        <motion.a
+                            href="tel:+919877215112"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 glass rounded-full hover:bg-opacity-20 transition-smooth text-sm sm:text-base"
+                        >
+                            <Phone size={18} className="sm:w-5 sm:h-5" />
+                            <span className="font-semibold">Call Me</span>
                         </motion.a>
 
                         <motion.a
