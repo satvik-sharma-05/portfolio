@@ -2,6 +2,8 @@
 
 A modern, fully responsive portfolio website showcasing AI/ML projects, experience, and skills. Built with Next.js, TypeScript, Framer Motion, and GSAP.
 
+🔗 **Live Demo**: [https://portfolio-ebon-pi-d1s6twycd9.vercel.app](https://portfolio-ebon-pi-d1s6twycd9.vercel.app)
+
 ## 🚀 Features
 
 - **Fully Responsive Design** - Optimized for mobile, tablet, and desktop
