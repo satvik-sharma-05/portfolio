@@ -13,6 +13,20 @@ const certificates = [
         isResume: true,
     },
     {
+        category: "Future Interns",
+        title: "Machine Learning Intern",
+        description: "Internship Completion Certificate",
+        date: "March 2026 - April 2026",
+        file: "/certificates/future_interns/SATVIK SHARMA Internship Certificate.pdf",
+    },
+    {
+        category: "Future Interns",
+        title: "Letter of Recommendation",
+        description: "ML Internship LoR",
+        date: "April 2026",
+        file: "/certificates/future_interns/SATVIK SHARMA LoR.pdf",
+    },
+    {
         category: "Warewe Consultancy",
         title: "Full Stack Developer Intern",
         description: "Internship Experience Certificate",
@@ -57,7 +71,7 @@ export default function Certificates() {
                     <span className="text-gradient">Certificates & Resume</span>
                 </motion.h2>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
                     {certificates.map((cert, index) => (
                         <motion.div
                             key={index}

@@ -5,6 +5,14 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
     {
+        company: "Future Interns",
+        role: "Machine Learning Intern",
+        location: "Remote",
+        duration: "March 2026 – April 2026",
+        description: "Successfully completed a 1-month intensive internship program in Machine Learning, working on real-world ML projects and gaining hands-on experience with modern machine learning frameworks and techniques.",
+        skills: ["Machine Learning", "Python", "Data Analysis", "Model Training", "ML Frameworks"],
+    },
+    {
         company: "Warewe Consultancy",
         role: "Full Stack Developer Intern",
         location: "Gurugram, India",
